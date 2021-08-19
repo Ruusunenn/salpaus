@@ -42,6 +42,13 @@ else{
 
 console.log(laskutehtava(843937, 983789));
 
+let pvm = "2021/08/18";
+
+function pvmfin(vuosi, kk, pv){
+     return "paivamaara oikeassa jarjestyksessa on " + pv+"."+kk+"."+vuosi;
+}
+console.log(pvmfin(pvm.split("/")[0],pvm.split("/")[1],pvm.split("/")[2]));
+
 
 
 /*

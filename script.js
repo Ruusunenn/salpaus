@@ -45,10 +45,25 @@ console.log(laskutehtava(843937, 983789));
 let pvm = "2021/08/18";
 
 function pvmfin(vuosi, kk, pv){
-     return "paivamaara oikeassa jarjestyksessa on " + pv+"."+kk+"."+vuosi;
-}
-console.log(pvmfin(pvm.split("/")[0],pvm.split("/")[1],pvm.split("/")[2]));
+ if (kk==03 || kk==04 || kk==05){
+    return "kevät " + pv+"."+kk+"."+vuosi;
 
+  }
+  else if(kk==06 || kk==07 || kk==08){
+    return "kesä " + pv+"."+kk+"."+vuosi;
+  }
+  else if(kk==09 || kk==10 || kk==11){
+     return "syksy " + pv+"."+kk+"."+vuosi;
+  }
+  else{
+     return "talvigv+"."+kk+"."+vuosi;
+  }
+}
+
+
+for(let i=1; i<16; i++){
+console.log(i+ " " + pvmfin(pvm.split("/")[0],pvm.split("/")[1],pvm.split("/")[2]));
+}
 
 
 /*

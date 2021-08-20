@@ -56,7 +56,7 @@ function pvmfin(vuosi, kk, pv){
      return "syksy " + pv+"."+kk+"."+vuosi;
   }
   else{
-     return "talvigv+"."+kk+"."+vuosi;
+     return "talvi " +pv+"."+kk+"."+vuosi;
   }
 }
 
@@ -64,6 +64,44 @@ function pvmfin(vuosi, kk, pv){
 for(let i=1; i<16; i++){
 console.log(i+ " " + pvmfin(pvm.split("/")[0],pvm.split("/")[1],pvm.split("/")[2]));
 }
+
+//console.log(dogument.queryselector('#kentta').type);
+console.log(document.querySelector('.lisaanappi').value);
+
+document.querySelector('.lisaanappi').addEventListener('click', e =>{
+  e.preventDefault();
+  console.log(document.querySelector('#kentta').value);
+
+document.querySelector('.ilmoitus').innerHTML = "kentän sisältö on: <b>" + document.querySelector('#kentta').value + "</b>";
+
+setTimeout(() => document.querySelector('.ilmoitus').innerHTML='', 3000);
+})
+
+
+document.querySelector('.merkinta').addEventListener('click', e=>{
+  e.preventDefault();
+  console.log("nappi toimii");
+  if(document.querySelector('#teht_a').checked){
+    alert('Tehtävä A on merkitty');
+  }
+  else{
+    alert('Tehtävä A ei ole merkitty');
+  }
+  
+  if(document.querySelector('#teht_b').checked){
+    alert('Tehtävä B on merkitty')
+  }
+  
+  else{
+    alert('Tehtäva B ei ole merkitty');
+  }
+
+
+
+
+});
+
+
 
 
 /*

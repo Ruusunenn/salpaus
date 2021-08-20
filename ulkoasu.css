@@ -12,3 +12,6 @@ text-align: center;
   background-color: lightcoral;
   text-align: center;
 }
+ul{
+  list-style: none;
+}

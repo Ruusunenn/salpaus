@@ -2,9 +2,21 @@
   <head>
     <title>koodiharjoitus</title>
     <link rel="stylesheet" href="ulkoasu.css">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
   </head>
   <body>
-    testitekstiä
+    <form id="opiskelia loamke">
+      <div class="ilmoitus"></div>
+      <div class="koodausdiv">
+        <label>kenttä </label><input type="text" id="kentta">
+        <input class="lisaanappi" type="submit" value="lisää">
+      </div>
+    </form>
+    <ul class="boksit">
+      <li class="sisalto"><input type="checkbox" id="teht_a">tehtävä A</li>
+      <li class="sisalto"><input type="checkbox" id="teht_b">tehtävä B</li>
+    </ul>
+    <input class="merkinta" type"submit" value="merkkaa">     
     <script src="script.js"></script>
   </body>
 </html>
